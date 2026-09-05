@@ -8,8 +8,18 @@
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <div class="header-row">
+        <div></div>
+        <div>
+          <h1>Mergington High School</h1>
+          <h2>Extracurricular Activities</h2>
+        </div>
+        <div class="header-actions">
+          <button id="login-button" type="button" class="header-button">Teacher Login</button>
+          <button id="logout-button" type="button" class="header-button hidden">Logout</button>
+        </div>
+      </div>
+      <p id="teacher-status" class="teacher-status">Teacher access required</p>
     </header>
 
     <main>
@@ -22,7 +32,7 @@
       </section>
 
       <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
+        <h3>Manage Registrations</h3>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
@@ -35,11 +45,31 @@
               <!-- Activity options will be loaded here -->
             </select>
           </div>
-          <button type="submit">Sign Up</button>
+          <button type="submit">Log in to register</button>
         </form>
         <div id="message" class="hidden"></div>
       </section>
     </main>
+
+    <div id="login-modal" class="modal hidden" aria-hidden="true">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Teacher Login</h3>
+          <button id="close-modal" type="button" class="close-button" aria-label="Close login dialog">×</button>
+        </div>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" required />
+          </div>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
 
     <footer>
       <p>&copy; 2026 Mergington High School</p>

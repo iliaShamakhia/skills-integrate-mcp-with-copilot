@@ -17,11 +17,39 @@ body {
 
 header {
   text-align: center;
-  padding: 20px 0;
+  padding: 20px 16px;
   margin-bottom: 30px;
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
+}
+
+.header-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-button {
+  background-color: white;
+  color: #1a237e;
+  font-weight: 600;
+}
+
+.header-button:hover {
+  background-color: #e8eaf6;
+}
+
+.teacher-status {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #dfe6ff;
 }
 
 header h1 {
@@ -162,6 +190,45 @@ button {
 
 button:hover {
   background-color: #3949ab;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+.modal-content {
+  background: white;
+  width: min(420px, 100%);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.close-button {
+  background: transparent;
+  color: #333;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 0 6px;
 }
 
 .message {
